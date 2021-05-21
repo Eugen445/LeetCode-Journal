@@ -55,7 +55,7 @@ void printList(ListNode *root)
 
 int main()
 {
-	//Í¶»úÈ¡ÇÉ²»¿ÉÈ¡
+	//Opportunism is not advisable //æŠ•æœºå–å·§ä¸å¯å–
 	//ListNode *l1 = new ListNode(2), *l2 = new ListNode(5);
 	//ListNode *cur1 = l1;
 	//ListNode *cur2 = l2;
