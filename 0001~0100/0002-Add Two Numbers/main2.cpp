@@ -1,3 +1,4 @@
+//Tiem : 2021_5_22
 #include <iostream>
 using namespace std;
 
@@ -106,15 +107,15 @@ void printList(ListNode* root)
 int main()
 {
 	ListNode *l1 = nullptr, *l2 = nullptr;
-	//creatTestCase(l1, l2);	//ÕâÑùĞ´µÄ´íÎóÔÚÄÄ£¿ //l1,l2ÔÚº¯ÊıÄÚÓĞÖµ,³öÈ¥¾ÍÎª¿Õ
-	creatTestCase(&l1, &l2);	//ĞèÒª´«µØÖ· //Õâ¸öĞèÒª´«2¼¶Ö¸Õë
+	//creatTestCase(l1, l2);	//è¿™æ ·å†™çš„é”™è¯¯åœ¨å“ªï¼Ÿ //l1,l2åœ¨å‡½æ•°å†…æœ‰å€¼,å‡ºå»å°±ä¸ºç©º
+	creatTestCase(&l1, &l2);	//éœ€è¦ä¼ åœ°å€ //è¿™ä¸ªéœ€è¦ä¼ 2çº§æŒ‡é’ˆ
 	printList(Solution().addTwoNumbers(l1, l2));
 	
 
 
-	ListNode l3, l4; //ÕâÀïÊÇ°üº¬ĞéÄâÍ·½áµã
-	//Ô­ÒòListNode() :val(0), next(nullptr) {} Ê¹µÃcreatTestCase²»Ì«ºÃĞ´
-	creatTestCase(&l3, &l4);	//ÊÇÉÏÃæº¯ÊıµÄÖØÔØ
+	ListNode l3, l4; //è¿™é‡Œæ˜¯åŒ…å«è™šæ‹Ÿå¤´ç»“ç‚¹
+	//åŸå› ListNode() :val(0), next(nullptr) {} ä½¿å¾—creatTestCaseä¸å¤ªå¥½å†™
+	creatTestCase(&l3, &l4);	//æ˜¯ä¸Šé¢å‡½æ•°çš„é‡è½½
 	printList(Solution().addTwoNumbers(l3.next, l4.next));
 	
 	return 0;
