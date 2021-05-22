@@ -1,3 +1,4 @@
+//Time : 2021_5_22
 #include <iostream>
 using namespace std;
 
@@ -10,7 +11,7 @@ struct ListNode {
 	ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-//Using the longest list in l1 and l2 as the result list //Ê¹ÓÃl1ºÍl2ÖÐ³¤¶È³¤µÄÁ´±í×÷ÎªÊä³öÁ´±í
+//Using the longest list in l1 and l2 as the result list //ä½¿ç”¨l1å’Œl2ä¸­é•¿åº¦é•¿çš„é“¾è¡¨ä½œä¸ºè¾“å‡ºé“¾è¡¨
 //Time Complexity: O(n)
 //Space Complexity: O(1)
 class Solution {
@@ -18,8 +19,8 @@ public:
 	ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 
 		int len1 = getLen(l1), len2 = getLen(l2);
-		ListNode *aid1 = len1 > len2 ? l1 : l2; //È¡³¤Á´±í
-		ListNode *aid2 = len1 > len2 ? l2 : l1; //È¡¶ÌÁ´±í
+		ListNode *aid1 = len1 > len2 ? l1 : l2; //å–é•¿é“¾è¡¨
+		ListNode *aid2 = len1 > len2 ? l2 : l1; //å–çŸ­é“¾è¡¨
 		ListNode *pre = nullptr;
 
 		int sum = 0;
@@ -36,8 +37,8 @@ public:
 			aid1 = aid1->next;
 			if (aid2) aid2 = aid2->next;
 		}
-		//aid1ÔÚÕâÊÇµÄ×´Ì¬Îª¿Õ,ÎÒÒÔÎªËü»¹ÊÇ³¤Á´±í×îºóÒ»¸ö½ÚµãµÄnext(nullptr),Êµ¼ÊÓ¦¸ÃÊÇÃ»ÓÐËùÊôÁË
-		//if (carry >= 1) aid1 = new ListNode(carry); //ËùÒÔÕâÑù¸³ÖµÊÇ²»»áÓ°ÏìÁ´±íµÄ½á¹ûµÄ,ËùÒÔµÃ¶¨ÒåÒ»¸öpreÖ¸Õë,¼ÇÂ¼aid1µÄÇ°Ò»´ÎµÄ×´Ì¬
+		//aid1åœ¨è¿™æ˜¯çš„çŠ¶æ€ä¸ºç©º,æˆ‘ä»¥ä¸ºå®ƒè¿˜æ˜¯é•¿é“¾è¡¨æœ€åŽä¸€ä¸ªèŠ‚ç‚¹çš„next(nullptr),å®žé™…åº”è¯¥æ˜¯æ²¡æœ‰æ‰€å±žäº†
+		//if (carry >= 1) aid1 = new ListNode(carry); //æ‰€ä»¥è¿™æ ·èµ‹å€¼æ˜¯ä¸ä¼šå½±å“é“¾è¡¨çš„ç»“æžœçš„,æ‰€ä»¥å¾—å®šä¹‰ä¸€ä¸ªpreæŒ‡é’ˆ,è®°å½•aid1çš„å‰ä¸€æ¬¡çš„çŠ¶æ€
 		if (carry >= 1) pre->next = new ListNode(carry);
 		return len1 > len2 ? l1 : l2;
 	}
