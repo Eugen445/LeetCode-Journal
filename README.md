@@ -1,2 +1,2 @@
 # LeetCode-Journal
-顺序整理所刷的题
+顺序整理leetCode所刷的题的解法
