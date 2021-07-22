@@ -31,5 +31,23 @@ private:
 private:
     int res, aid;
 };
+
+2.阿布
+class Solution {
+public:
+    int kthLargest(TreeNode* root, int k) {
+        dfs(root);
+        sort(arr.begin(), arr.end(), [](int&a, int& b) {return a > b;});
+        return arr[k - 1];
+    }
+    void dfs(TreeNode* root) {
+        if (!root) return;
+        arr.push_back(root->val);
+        dfs(root->left);
+        dfs(root->right);
+    }
+private:
+    vector<int> arr;
+};
 ```
 
